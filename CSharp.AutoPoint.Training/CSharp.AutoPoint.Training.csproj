@@ -78,21 +78,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\LMSDbContext.cs" />
-    <Compile Include="DependencyInjection\UnityConfig.cs" />
-    <Compile Include="Interfaces\ICourseRepository.cs" />
-    <Compile Include="Interfaces\ICourseService.cs" />
-    <Compile Include="Interfaces\IEnrollmentRepository.cs" />
-    <Compile Include="Interfaces\IEnrollmentService.cs" />
-    <Compile Include="Interfaces\IUserRepository.cs" />
-    <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="Configuration\UnityConfig.cs" />
+    <Compile Include="Data\ICourseRepository.cs" />
+    <Compile Include="Services\ICourseService.cs" />
+    <Compile Include="Data\IEnrollmentRepository.cs" />
+    <Compile Include="Services\IEnrollmentService.cs" />
+    <Compile Include="Data\IUserRepository.cs" />
+    <Compile Include="Services\IUserService.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Enrollment.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\CourseRepository.cs" />
-    <Compile Include="Repositories\EnrollmentRepository.cs" />
-    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Data\Repositories\CourseRepository.cs" />
+    <Compile Include="Data\Repositories\EnrollmentRepository.cs" />
+    <Compile Include="Data\Repositories\UserRepository.cs" />
     <Compile Include="Services\CourseService.cs" />
     <Compile Include="Services\EnrollmentService.cs" />
     <Compile Include="Services\UserService.cs" />
