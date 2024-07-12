@@ -1,4 +1,5 @@
-﻿using CSharp.AutoPoint.Training.DependencyInjection;
+﻿using CSharp.AutoPoint.Training.Agents;
+using CSharp.AutoPoint.Training.DependencyInjection;
 using CSharp.AutoPoint.Training.Interfaces;
 using CSharp.AutoPoint.Training.Models;
 using CSharp.AutoPoint.Training.Utilities;
