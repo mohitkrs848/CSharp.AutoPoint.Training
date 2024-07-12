@@ -1,0 +1,22 @@
+﻿Authentication : Admin/Normal user - Abstraction, Overloading, Enums(different types of users)
+Admin: CRUD operations
+Normal(if their name is present in database table): Only Create/Read operations
+
+
+Event Handlers: taking input from the keyboard and performing operations based on the input- like click 1 to Exit.
+
+
+Exception Handling : try to cover most on the Agent/Implementation part
+
+Loggers : Microsoft.Extensions.Logging to file into Debug folder using timestamp updated on daily basis.
+
+Unit Testing : for the CRUD operations
+
+Async/Await: while calling the Db
+
+
+Comments: On every implementation method insert a snippet that will have summary, parameters and return type descriptio
+
+Users can access multiple operations: 
+- Courses (types/numbers/top elected course)
+- Users (total/ types(admin/normal))))
