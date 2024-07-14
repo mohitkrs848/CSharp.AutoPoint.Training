@@ -34,3 +34,5 @@ bld/
 .vscode/
 .history/
 .vs/
+
+/packages
