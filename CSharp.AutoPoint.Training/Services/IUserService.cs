@@ -14,5 +14,6 @@ namespace CSharp.AutoPoint.Training.Interfaces
         void CreateUser(User user);
         void UpdateUser(User user);
         void DeleteUser(int id);
+        IEnumerable<Enrollment> GetAllEnrollments(int id);
     }
 }

@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CSharp.AutoPoint.Training.Models
 {
     internal class Course
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
@@ -16,10 +18,9 @@ namespace CSharp.AutoPoint.Training.Models
         [MaxLength(500)]
         public string Description { get; set; }
 
-        [Required]
-        public int InstructorId { get; set; } //Foreign key to User
+        //public int InstructorId { get; set; } //Foreign key to User
 
-        public User Instructor { get; set; } // Navigation property
+        //public User Instructor { get; set; } // Navigation property
 
         public ICollection<Enrollment> Enrollments { get; set; } // Navigation property
     }

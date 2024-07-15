@@ -9,44 +9,21 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Repositories
 {
-    internal class EnrollmentRepository : IEnrollmentRepository
+    internal class EnrollmentRepository : BaseRepository<Enrollment>, IEnrollmentRepository
     {
-        private readonly LMSDbContext _context;
 
-        public EnrollmentRepository(LMSDbContext context)
+        public EnrollmentRepository(LMSDbContext context) : base(context)
         {
-            _context = context;
         }
 
-        public Enrollment GetEnrollmentById(int id) => _context.Enrollments.Find(id);
+        public Enrollment GetEnrollmentById(int id) => GetById(id);
 
-        public IEnumerable<Enrollment> GetAllEnrollments() => _context.Enrollments.ToList();
+        public IEnumerable<Enrollment> GetAllEnrollments() => GetAll();
 
-        public void AddEnrollment(Enrollment enrollment)
-        {
-            _context.Enrollments.Add(enrollment);
-            _context.SaveChanges();
-        }
+        public void AddEnrollment(Enrollment enrollment)=> Add(enrollment);
 
-        public void UpdateEnrollment(Enrollment enrollment)
-        {
-            var existingEnrollment = GetEnrollmentById(enrollment.Id);
-            if (existingEnrollment != null)
-            {
-                existingEnrollment.CourseId = enrollment.CourseId;
-                existingEnrollment.StudentId = enrollment.StudentId;
-                _context.SaveChanges();
-            }
-        }
+        public void UpdateEnrollment(Enrollment enrollment) => Update(enrollment);
 
-        public void DeleteEnrollment(int id)
-        {
-            var enrollment = GetEnrollmentById(id);
-            if (enrollment != null)
-            {
-                _context.Enrollments.Remove(enrollment);
-                _context.SaveChanges();
-            }
-        }
+        public void DeleteEnrollment(int id) => Delete(GetById(id));
     }
 }

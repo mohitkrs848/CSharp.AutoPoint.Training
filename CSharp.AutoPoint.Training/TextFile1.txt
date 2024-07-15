@@ -20,3 +20,6 @@ Comments: On every implementation method insert a snippet that will have summary
 Users can access multiple operations: 
 - Courses (types/numbers/top elected course)
 - Users (total/ types(admin/normal))))
+
+Document structure:
+- Name_minorVersion_timestamp

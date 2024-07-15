@@ -11,17 +11,17 @@ namespace CSharp.AutoPoint.Training.Models
     internal class Enrollment
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         [Required]
         [ForeignKey("Course")]
         public int CourseId { get; set; } //Foreign key to Course
+        public Course Course { get; set; } // Navigation property
 
         [Required]
         [ForeignKey("Student")]
         public int StudentId { get; set; } //Foreign key to User
-
-        public Course Course { get; set; } // Navigation property
         public User Student { get; set; } // Navigation property
     }
 }

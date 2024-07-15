@@ -26,5 +26,11 @@ namespace CSharp.AutoPoint.Training.Services
         public void UpdateUser(User user) => _userRepository.UpdateUser(user);
 
         public void DeleteUser(int id) => _userRepository.DeleteUser(id);
+
+        public IEnumerable<Enrollment> GetAllEnrollments(int id)
+        {
+            var user = _userRepository.GetUserById(id);
+            return user.Enrollments;
+        }
     }
 }
