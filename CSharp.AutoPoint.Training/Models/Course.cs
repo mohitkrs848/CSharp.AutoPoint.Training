@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CSharp.AutoPoint.Training.Models
 {
-    internal class Course
+    public class Course
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

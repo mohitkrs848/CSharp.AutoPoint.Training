@@ -1,13 +1,9 @@
 ﻿using CSharp.AutoPoint.Training.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CSharp.AutoPoint.Training.Interfaces
+namespace CSharp.AutoPoint.Training.Data
 {
-    internal interface IUserRepository
+    public interface IUserRepository
     {
         User GetUserById(int id);
         IEnumerable<User> GetAllUsers();

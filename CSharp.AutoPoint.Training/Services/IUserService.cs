@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Interfaces
 {
-    internal interface IUserService
+    public interface IUserService
     {
         User GetUserById(int id);
         IEnumerable<User> GetAllUsers();

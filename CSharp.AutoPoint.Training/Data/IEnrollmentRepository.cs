@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp.AutoPoint.Training.Interfaces
+namespace CSharp.AutoPoint.Training.Data
 {
-    internal interface IEnrollmentRepository
+    public interface IEnrollmentRepository
     {
         Enrollment GetEnrollmentById(int id);
         IEnumerable<Enrollment> GetAllEnrollments();

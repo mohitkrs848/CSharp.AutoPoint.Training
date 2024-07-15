@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace CSharp.AutoPoint.Training.Repositories
 {
-    internal class UserRepository : BaseRepository<User>, IUserRepository
+    public class UserRepository : BaseRepository<User>, IUserRepository
     {
         public UserRepository(LMSDbContext context) : base(context)
         {

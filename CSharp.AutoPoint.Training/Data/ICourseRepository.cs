@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp.AutoPoint.Training.Interfaces
+namespace CSharp.AutoPoint.Training.Data
 {
-    internal interface ICourseRepository
+    public interface ICourseRepository
     {
         Course GetCourseById(int id);
         IEnumerable<Course> GetAllCourses();

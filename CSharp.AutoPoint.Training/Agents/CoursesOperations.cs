@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Agents
 {
-    internal class CoursesOperations
+    public class CoursesOperations
     {
         private Helper helperUtilities = new Helper();
         Logger logger = new Logger();

@@ -1,4 +1,5 @@
-﻿using CSharp.AutoPoint.Training.Interfaces;
+﻿using CSharp.AutoPoint.Training.Data;
+using CSharp.AutoPoint.Training.Interfaces;
 using CSharp.AutoPoint.Training.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Services
 {
-    internal class UserService : IUserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
 

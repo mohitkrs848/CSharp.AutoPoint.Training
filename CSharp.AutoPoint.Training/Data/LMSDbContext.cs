@@ -5,7 +5,7 @@ using System.Data.Entity;
 
 namespace CSharp.AutoPoint.Training.Data
 {
-    internal class LMSDbContext : DbContext
+    public class LMSDbContext : DbContext
     {
         public LMSDbContext() : base("Server=(localdb)\\MyDemoDB;Database=LMSdb;Integrated Security=True;")
         {

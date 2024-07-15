@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Models
 {
-    internal class Enrollment
+    public class Enrollment
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

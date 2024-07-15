@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.AutoPoint.Training", "CSharp.AutoPoint.Training\CSharp.AutoPoint.Training.csproj", "{53420D76-E5C8-467A-944D-9AF694135395}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.AutoPoint.Training.Tests", "CSharp.AutoPoint.Training.Tests\CSharp.AutoPoint.Training.Tests.csproj", "{B9A918CD-D525-40C3-BB00-799C1F7E3A25}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{53420D76-E5C8-467A-944D-9AF694135395}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53420D76-E5C8-467A-944D-9AF694135395}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53420D76-E5C8-467A-944D-9AF694135395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9A918CD-D525-40C3-BB00-799C1F7E3A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9A918CD-D525-40C3-BB00-799C1F7E3A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9A918CD-D525-40C3-BB00-799C1F7E3A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9A918CD-D525-40C3-BB00-799C1F7E3A25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

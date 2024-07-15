@@ -14,7 +14,7 @@ namespace CSharp.AutoPoint.Training.Models
         Instructor
     }
 
-    internal class User
+    public class User
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

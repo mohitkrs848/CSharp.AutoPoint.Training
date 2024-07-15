@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Data
 {
-    internal class BaseRepository<T> where T : class
+    public class BaseRepository<T> where T : class
     {
         protected readonly LMSDbContext _context;
         protected readonly DbSet<T> _dbSet;

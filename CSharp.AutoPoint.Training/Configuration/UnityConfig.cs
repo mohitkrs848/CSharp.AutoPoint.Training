@@ -1,4 +1,5 @@
-﻿using CSharp.AutoPoint.Training.Interfaces;
+﻿using CSharp.AutoPoint.Training.Data;
+using CSharp.AutoPoint.Training.Interfaces;
 using CSharp.AutoPoint.Training.Repositories;
 using CSharp.AutoPoint.Training.Services;
 using CSharp.AutoPoint.Training.Utilities;
