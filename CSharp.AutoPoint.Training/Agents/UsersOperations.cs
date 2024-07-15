@@ -13,23 +13,43 @@ namespace CSharp.AutoPoint.Training.Agents
     internal class UsersOperations
     {
         private Helper helperUtilities = new Helper();
+        Logger logger = new Logger();
+
         internal void CreateUser(IUserService userService)
         {
             Console.Clear();
-            var name = helperUtilities.ReadInput("Enter Name: ");
-            var email = helperUtilities.ReadInput("Enter Email: ");
-            var role = helperUtilities.ReadInput("Enter Role: ");
+            User user = new User();
+            user.Name = helperUtilities.ReadInput("Enter Name: ");
+            user.Email = helperUtilities.ReadInput("Enter Email: ");
 
-            var user = new User { Name = name, Email = email, Role = role };
+            while (true)
+            {
+                user.Role = helperUtilities.ReadInput("Enter Role (S for Student/I for Instructor): ").ToUpper();
+                if (user.Role == "S")
+                {
+                    user.Role = UserRole.Student.ToString();
+                    break;
+                }
+                else if(user.Role == "I")
+                {
+                    user.Role = UserRole.Instructor.ToString();
+                    break;
+                }
+                else
+                {
+                    logger.LogWarning("Invalid role. Please enter 'S' for Student or 'I' for Instructor.");
+                }
+            }
 
             try
             {
                 userService.CreateUser(user);
-                Console.WriteLine("User created successfully. Press any key to continue...");
+                logger.LogInformation("User created successfully. Press any key to continue...");
             }
+
             catch (Exception ex)
             {
-                Console.WriteLine($"Error creating user: {ex.Message}");
+                logger.LogError($"Error creating user: {ex.Message}");
             }
 
             Console.ReadKey();
@@ -43,11 +63,11 @@ namespace CSharp.AutoPoint.Training.Agents
             try
             {
                 userService.DeleteUser(id);
-                Console.WriteLine("User deleted successfully.");
+                logger.LogInformation("User deleted successfully.");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error deleting user: {ex.Message}");
+                logger.LogError($"Error deleting user: {ex.Message}");
             }
 
             Console.ReadKey();
@@ -68,7 +88,7 @@ namespace CSharp.AutoPoint.Training.Agents
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error fetching users: {ex.Message}");
+                logger.LogError($"Error fetching users: {ex.Message}");
             }
 
             Console.ReadKey();
@@ -88,7 +108,7 @@ namespace CSharp.AutoPoint.Training.Agents
             }
             else
             {
-                Console.WriteLine("No enrollments found.");
+                logger.LogError("No enrollments found.");
             }
             Console.ReadKey();
         }
@@ -112,7 +132,7 @@ namespace CSharp.AutoPoint.Training.Agents
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error fetching user: {ex.Message}");
+                logger.LogError($"Error fetching user: {ex.Message}");
             }
 
             Console.ReadKey();
@@ -142,7 +162,7 @@ namespace CSharp.AutoPoint.Training.Agents
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error updating user: {ex.Message}");
+                logger.LogError($"Error updating user: {ex.Message}");
             }
 
             Console.ReadKey();

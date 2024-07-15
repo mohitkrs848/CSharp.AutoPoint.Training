@@ -1,16 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Serilog;
 
 namespace CSharp.AutoPoint.Training.Utilities
 {
-    internal static class Logger
+    public class Logger
     {
-        public static void Log(string message)
+        public Logger()
         {
-            Console.WriteLine($"\n[{DateTime.Now}] {message}");
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.Console()
+                .CreateLogger();
+        }
+
+        public void LogInformation(string message)
+        {
+            Log.Information(message);
+        }
+
+        public void LogDebug(string message)
+        {
+            Log.Debug(message);
+        }
+        public void LogWarning(string message)
+        {
+            Log.Warning(message);
+        }
+
+        public void LogError(string message)
+        {
+            Log.Error(message);
         }
     }
 }
