@@ -1,11 +1,7 @@
 ﻿using CSharp.AutoPoint.Training.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CSharp.AutoPoint.Training.Interfaces
+namespace CSharp.AutoPoint.Training.Data
 {
     public interface IUserRepository
     {

@@ -1,4 +1,5 @@
-﻿using CSharp.AutoPoint.Training.Interfaces;
+﻿using CSharp.AutoPoint.Training.Data;
+using CSharp.AutoPoint.Training.Interfaces;
 using CSharp.AutoPoint.Training.Models;
 using System;
 using System.Collections.Generic;

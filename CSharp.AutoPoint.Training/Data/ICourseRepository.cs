@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp.AutoPoint.Training.Interfaces
+namespace CSharp.AutoPoint.Training.Data
 {
     public interface ICourseRepository
     {
