@@ -1,6 +1,7 @@
 ﻿using CSharp.AutoPoint.Training.Interfaces;
 using CSharp.AutoPoint.Training.Models;
 using CSharp.AutoPoint.Training.Utilities;
+using Serilog;
 using System;
 
 namespace CSharp.AutoPoint.Training.Agents
@@ -8,6 +9,7 @@ namespace CSharp.AutoPoint.Training.Agents
     internal class EnrollmentOperations
     {
         private readonly Helper helperUtilities = new Helper();
+        Logger logger = new Logger();
 
         internal void CreateEnrollment(IEnrollmentService enrollmentService)
         {
@@ -20,11 +22,11 @@ namespace CSharp.AutoPoint.Training.Agents
             try
             {
                 enrollmentService.CreateEnrollment(enrollment);
-                Console.WriteLine("Enrollment created successfully. Press any key to continue...");
+                logger.LogInformation("Enrollment created successfully. Press any key to continue...");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error creating Enrollment: {ex.Message}");
+                logger.LogError($"Error creating Enrollment: {ex.Message}");
             }
             Console.ReadKey();
         }
@@ -35,11 +37,11 @@ namespace CSharp.AutoPoint.Training.Agents
             try
             {
                 enrollmentService.DeleteEnrollment(id);
-                Console.WriteLine("Enrollment deleted successfully. Press any key to continue...");
+                logger.LogInformation("Enrollment deleted successfully. Press any key to continue...");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error deleting Enrollment: {ex.Message}");
+                logger.LogError($"Error deleting Enrollment: {ex.Message}");
             }
             Console.ReadKey();
         }
@@ -81,16 +83,16 @@ namespace CSharp.AutoPoint.Training.Agents
                 try
                 {
                     enrollmentService.UpdateEnrollment(enrollment);
-                    Console.WriteLine("Enrollment updated successfully. Press any key to continue...");
+                    logger.LogInformation("Enrollment updated successfully. Press any key to continue...");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error updating Enrollment: {ex.Message}");
+                    logger.LogError($"Error updating Enrollment: {ex.Message}");
                 }
             }
             else
             {
-                Console.WriteLine("Enrollment not found.");
+                logger.LogError("Enrollment not found.");
             }
             Console.ReadKey();
         }

@@ -8,6 +8,12 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Models
 {
+    public enum UserRole
+    {
+        Student,
+        Instructor
+    }
+
     internal class User
     {
         [Key]

@@ -13,6 +13,7 @@ namespace CSharp.AutoPoint.Training.Agents
     internal class CoursesOperations
     {
         private Helper helperUtilities = new Helper();
+        Logger logger = new Logger();
 
         internal void CreateCourse(ICourseService courseService)
         {
@@ -25,11 +26,11 @@ namespace CSharp.AutoPoint.Training.Agents
             try
             {
                 courseService.CreateCourse(course);
-                Console.WriteLine("Course created successfully. Press any key to continue...");
+                logger.LogInformation("Course created successfully. Press any key to continue...");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error creating Course: {ex.Message}");
+                logger.LogError($"Error creating Course: {ex.Message}");
             }
             Console.ReadKey();
         }
@@ -40,24 +41,31 @@ namespace CSharp.AutoPoint.Training.Agents
             try
             {
                 courseService.DeleteCourse(id);
-                Console.WriteLine("Course deleted successfully. Press any key to continue...");
+                logger.LogInformation("Course deleted successfully. Press any key to continue...");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error deleting Course: {ex.Message}");
+                logger.LogError($"Error deleting Course: {ex.Message}");
             }
             Console.ReadKey();
         }
 
         internal void DisplayAllCourses(ICourseService courseService)
         {
-            Console.Clear();
-            Console.WriteLine("Courses:");
-            foreach (var course in courseService.GetAllCourses())
+            try
             {
-                Console.WriteLine($"ID: {course.Id}, Title: {course.Title}, Description: {course.Description}");
+                Console.Clear();
+                Console.WriteLine("Courses:");
+                foreach (var course in courseService.GetAllCourses())
+                {
+                    Console.WriteLine($"ID: {course.Id}, Title: {course.Title}, Description: {course.Description}");
+                }
+                Console.ReadKey();
             }
-            Console.ReadKey();
+            catch (Exception ex)
+            {
+                logger.LogError($"Error displaying all the courses: {ex.Message}");
+            }
         }
 
         internal void GetCourse(ICourseService courseService)
@@ -86,11 +94,11 @@ namespace CSharp.AutoPoint.Training.Agents
                 try
                 {
                     courseService.UpdateCourse(course);
-                    Console.WriteLine("Course updated successfully. Press any key to continue...");
+                    logger.LogInformation("Course updated successfully. Press any key to continue...");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($"Error updating Course: {ex.Message}");
+                    logger.LogError($"Error updating Course: {ex.Message}");
                 }
             }
             else

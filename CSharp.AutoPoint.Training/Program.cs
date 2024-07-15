@@ -4,16 +4,18 @@ using CSharp.AutoPoint.Training.Interfaces;
 using CSharp.AutoPoint.Training.Models;
 using CSharp.AutoPoint.Training.Services;
 using CSharp.AutoPoint.Training.Utilities;
+using Serilog;
 using System;
 using Unity;
 
 namespace CSharp.AutoPoint.Training
 {
     class Program
-    {
+    { 
         public static UsersOperations usersOperations = new UsersOperations();
         public static CoursesOperations courseOperations = new CoursesOperations();
         public static EnrollmentOperations enrollmentOperations = new EnrollmentOperations();
+        public static Logger logger = new Logger();
 
         static void Main(string[] args)
         {
@@ -51,7 +53,7 @@ namespace CSharp.AutoPoint.Training
                         Environment.Exit(0);
                         break;
                     default:
-                        Console.WriteLine("Invalid option. Please try again.");
+                        logger.LogError("Invalid option. Please try again.");
                         Console.ReadKey();
                         break;
                 }
@@ -97,7 +99,7 @@ namespace CSharp.AutoPoint.Training
                     case "7":
                         return;
                     default:
-                        Console.WriteLine("Invalid option. Please try again.");
+                        logger.LogError("Invalid option. Please try again.");
                         Console.ReadKey();
                         break;
                 }
@@ -139,7 +141,7 @@ namespace CSharp.AutoPoint.Training
                     case "6":
                         return;
                     default:
-                        Console.WriteLine("Invalid option. Please try again.");
+                        logger.LogError("Invalid option. Please try again.");
                         Console.ReadKey();
                         break;
                 }
@@ -179,7 +181,7 @@ namespace CSharp.AutoPoint.Training
                 case "6":
                     return;
                 default:
-                    Console.WriteLine("Invalid option. Please try again.");
+                    logger.LogError("Invalid option. Please try again.");
                     Console.ReadKey();
                     break;
             }
