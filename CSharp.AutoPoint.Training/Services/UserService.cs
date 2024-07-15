@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Services
 {
-    internal class UserService : IUserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
 

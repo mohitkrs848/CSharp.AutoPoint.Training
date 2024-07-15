@@ -6,7 +6,7 @@ using System;
 
 namespace CSharp.AutoPoint.Training.Agents
 {
-    internal class EnrollmentOperations
+    public class EnrollmentOperations
     {
         private readonly Helper helperUtilities = new Helper();
         Logger logger = new Logger();

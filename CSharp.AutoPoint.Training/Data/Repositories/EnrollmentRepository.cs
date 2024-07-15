@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Repositories
 {
-    internal class EnrollmentRepository : BaseRepository<Enrollment>, IEnrollmentRepository
+    public class EnrollmentRepository : BaseRepository<Enrollment>, IEnrollmentRepository
     {
 
         public EnrollmentRepository(LMSDbContext context) : base(context)

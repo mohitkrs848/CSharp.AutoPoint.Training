@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Interfaces
 {
-    internal interface IEnrollmentRepository
+    public interface IEnrollmentRepository
     {
         Enrollment GetEnrollmentById(int id);
         IEnumerable<Enrollment> GetAllEnrollments();

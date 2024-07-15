@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Services
 {
-    internal class CourseService : ICourseService
+    public class CourseService : ICourseService
     {
         private readonly ICourseRepository _courseRepository;
 
