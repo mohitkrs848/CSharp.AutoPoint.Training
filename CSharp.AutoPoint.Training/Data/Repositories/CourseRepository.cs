@@ -9,41 +9,20 @@ using System.Threading.Tasks;
 
 namespace CSharp.AutoPoint.Training.Repositories
 {
-    internal class CourseRepository : ICourseRepository
+    internal class CourseRepository : BaseRepository<Course>, ICourseRepository
     {
-        private readonly LMSDbContext _context;
-        public CourseRepository(LMSDbContext context)
+        public CourseRepository(LMSDbContext context) : base(context)
         {
-            _context = context;
-        }
-        public Course GetCourseById(int id) => _context.Courses.Find(id);
-        public IEnumerable<Course> GetAllCourses() => _context.Courses.ToList();
-
-        public void AddCourse(Course course)
-        {
-            _context.Courses.Add(course);
         }
 
-        public void UpdateCourse(Course course)
-        {
-            var existingCourse = GetCourseById(course.Id);
-            if(existingCourse != null)
-            {
-                existingCourse.Title = course.Title;
-                existingCourse.Description = course.Description;
-                existingCourse.InstructorId = course.InstructorId;
-                _context.SaveChanges();
-            }
-        }
+        public Course GetCourseById(int id) => GetById(id);
 
-        public void DeleteCourse(int id)
-        {
-            var existingCourse = GetCourseById(id);
-            if(existingCourse != null)
-            {
-                _context.Courses.Remove(existingCourse);
-                _context.SaveChanges();
-            }
-        }
+        public IEnumerable<Course> GetAllCourses() => GetAll();
+
+        public void AddCourse(Course course) => Add(course);
+
+        public void UpdateCourse(Course course) => Update(course);
+
+        public void DeleteCourse(int id) => Delete(GetById(id));
     }
 }

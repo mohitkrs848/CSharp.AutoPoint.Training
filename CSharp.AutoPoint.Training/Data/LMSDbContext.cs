@@ -7,9 +7,9 @@ namespace CSharp.AutoPoint.Training.Data
 {
     internal class LMSDbContext : DbContext
     {
-        public LMSDbContext() : base("Server=(localdb)\\MyDemoDB;Database=SerilogDB;Integrated Security=True;")
+        public LMSDbContext() : base("Server=(localdb)\\MyDemoDB;Database=LMSdb;Integrated Security=True;")
         {
-            Database.SetInitializer(new CreateDatabaseIfNotExists<LMSDbContext>());
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<LMSDbContext>());
         }
 
         public DbSet<User> Users { get; set; }
@@ -20,26 +20,25 @@ namespace CSharp.AutoPoint.Training.Data
         {
             // Configure the primary key for the Users table
             modelBuilder.Entity<User>()
-                .HasKey(u => u.Id);
+                .HasKey(u => u.Id)
+                .HasMany(u => u.Enrollments);
 
             // Configure the primary key for the Courses table
             modelBuilder.Entity<Course>()
-                .HasKey(c => c.Id);
-
-            // Configure the primary key for the Enrollments table
-            modelBuilder.Entity<Enrollment>()
-                .HasKey(e => e.Id);
+                .HasKey(c => c.Id)
+                .HasMany(c => c.Enrollments);                
 
             // Configure the relationships between the tables
             modelBuilder.Entity<Enrollment>()
+                .HasKey(e => e.Id)
                 .HasRequired(e => e.Course)
-                .WithMany()
+                .WithMany(c => c.Enrollments)
                 .HasForeignKey(e => e.CourseId)
                 .WillCascadeOnDelete(false); // Disable cascade delete
 
             modelBuilder.Entity<Enrollment>()
                 .HasRequired(e => e.Student)
-                .WithMany()
+                .WithMany(u => u.Enrollments)
                 .HasForeignKey(e => e.StudentId)
                 .WillCascadeOnDelete(false); // Disable cascade delete
         }

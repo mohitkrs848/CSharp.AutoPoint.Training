@@ -77,9 +77,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Agents\UsersOperations.cs" />
-    <Compile Include="Agents\EnrollmentOperations.cs" />
     <Compile Include="Agents\CoursesOperations.cs" />
+    <Compile Include="Agents\EnrollmentOperations.cs" />
+    <Compile Include="Agents\UsersOperations.cs" />
+    <Compile Include="Data\BaseRepository.cs" />
     <Compile Include="Data\LMSDbContext.cs" />
     <Compile Include="Configuration\UnityConfig.cs" />
     <Compile Include="Data\ICourseRepository.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Services\CourseService.cs" />
     <Compile Include="Services\EnrollmentService.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="Utilities\Helper.cs" />
     <Compile Include="Utilities\Logger.cs" />
   </ItemGroup>
   <ItemGroup>
