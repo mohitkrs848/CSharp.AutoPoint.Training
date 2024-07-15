@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CSharp.AutoPoint.Training.Agents
+﻿namespace CSharp.AutoPoint.Training.Agents
 {
-    internal class UsersOperations
+    public class UsersOperations
     {
-        
+        public void CreateUser()
+        {
+        }
+        public void UpdateUser()
+        {
+        }
     }
 }
