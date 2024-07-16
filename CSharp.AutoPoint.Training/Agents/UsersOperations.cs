@@ -3,10 +3,9 @@ using CSharp.AutoPoint.Training.Models;
 using CSharp.AutoPoint.Training.Services;
 using CSharp.AutoPoint.Training.Utilities;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
+using static CSharp.AutoPoint.Training.Models.User;
 
 namespace CSharp.AutoPoint.Training.Agents
 {
@@ -166,6 +165,22 @@ namespace CSharp.AutoPoint.Training.Agents
             }
 
             Console.ReadKey();
+        }
+
+        internal async Task CountUsers(IUserService userService)
+        {
+            Console.Clear();
+            CountUsers countStudent = userService.CountStudentsAsync;
+            CountUsers countInstructor = userService.CountInstructorAsync;
+
+            logger.LogInformation($"Total Students: {await ExecuteCountUsersAsync(countStudent)}");
+            logger.LogInformation($"Total Instructors: {await ExecuteCountUsersAsync(countInstructor)}");
+            Console.ReadKey();
+        }
+
+        public async Task<int> ExecuteCountUsersAsync(CountUsers countUsers)
+        {
+            return await countUsers();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static CSharp.AutoPoint.Training.Models.User;
 
 namespace CSharp.AutoPoint.Training.Services
 {
@@ -32,6 +33,16 @@ namespace CSharp.AutoPoint.Training.Services
         {
             var user = _userRepository.GetUserById(id);
             return user.Enrollments;
+        }
+
+        public async Task<int> CountStudentsAsync()
+        {
+            return await _userRepository.CountUsersByRoleAsync(UserRole.Student);
+        }
+
+        public async Task<int> CountInstructorAsync()
+        {
+            return await _userRepository.CountUsersByRoleAsync(UserRole.Instructor);
         }
     }
 }

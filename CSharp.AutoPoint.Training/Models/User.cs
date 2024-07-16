@@ -32,6 +32,8 @@ namespace CSharp.AutoPoint.Training.Models
         [MaxLength(10)]
         public string Role { get; set; }
 
-        public ICollection<Enrollment> Enrollments { get; set; }
+        public virtual ICollection<Enrollment> Enrollments { get; set; }
+
+        public delegate Task<int> CountUsers();
     }
 }

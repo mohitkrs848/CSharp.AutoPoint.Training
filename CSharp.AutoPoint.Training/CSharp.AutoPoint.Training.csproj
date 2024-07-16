@@ -153,6 +153,7 @@
     <Compile Include="Services\CourseService.cs" />
     <Compile Include="Services\EnrollmentService.cs" />
     <Compile Include="Services\UserService.cs" />
+    <Compile Include="Utilities\ApplicationEvent.cs" />
     <Compile Include="Utilities\Helper.cs" />
     <Compile Include="Utilities\Logger.cs" />
   </ItemGroup>
