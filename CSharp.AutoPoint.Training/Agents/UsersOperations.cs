@@ -14,6 +14,10 @@ namespace CSharp.AutoPoint.Training.Agents
         private Helper helperUtilities = new Helper();
         Logger logger = new Logger();
 
+        /// <summary>
+        /// Creating a new user in the User Table with Name, Email and Role
+        /// </summary>
+        /// <param name="userService">Parameter of type IUserInterface for referencing the methods initialized in the interface</param>
         internal void CreateUser(IUserService userService)
         {
             Console.Clear();
@@ -54,6 +58,10 @@ namespace CSharp.AutoPoint.Training.Agents
             Console.ReadKey();
         }
 
+        /// <summary>
+        /// Deleting a user from the database using the User id
+        /// </summary>
+        /// <param name="userService">Parameter of type IUserInterface for referencing the methods initialized in the interface<</param>
         internal void DeleteUser(IUserService userService)
         {
             Console.Clear();
