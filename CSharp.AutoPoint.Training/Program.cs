@@ -11,13 +11,35 @@ using Unity;
 namespace CSharp.AutoPoint.Training
 {
     class Program
-    { 
+    {
         public static UsersOperations usersOperations = new UsersOperations();
         public static CoursesOperations courseOperations = new CoursesOperations();
         public static EnrollmentOperations enrollmentOperations = new EnrollmentOperations();
         public static Logger logger = new Logger();
 
         static void Main(string[] args)
+        {
+            ApplicationEvent.StartApplication += OnStartApplication;
+            Console.WriteLine("Press '1' to start the application.");
+            var input = Console.ReadLine();
+
+            if (input == "1")
+            {
+                ApplicationEvent.OnStartApplication();
+            }
+            else
+            {
+                Console.WriteLine("Invalid input. Exiting...");
+            }
+        }
+
+        private static void OnStartApplication(object sender, EventArgs e)
+        {
+            logger.LogInformation("LMS Application Started......");
+            MainMenu();
+        }
+
+        private static void MainMenu()
         {
             // Setup Unity container
             var container = UnityConfig.RegisterComponents();
@@ -72,7 +94,8 @@ namespace CSharp.AutoPoint.Training
                 Console.WriteLine("4. Update User");
                 Console.WriteLine("5. Delete User");
                 Console.WriteLine("6. Find Enrollments");
-                Console.WriteLine("7. Go Back");
+                Console.WriteLine("7. Count Users");
+                Console.WriteLine("8. Go Back");
                 Console.WriteLine("Please select an option: ");
 
                 var input = Console.ReadLine();
@@ -97,6 +120,9 @@ namespace CSharp.AutoPoint.Training
                         usersOperations.FindEnrollments(userService);
                         break;
                     case "7":
+                        _ = usersOperations.CountUsers(userService);
+                        break;
+                    case "8":
                         return;
                     default:
                         logger.LogError("Invalid option. Please try again.");

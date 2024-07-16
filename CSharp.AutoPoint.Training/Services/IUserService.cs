@@ -15,5 +15,7 @@ namespace CSharp.AutoPoint.Training.Interfaces
         void UpdateUser(User user);
         void DeleteUser(int id);
         IEnumerable<Enrollment> GetAllEnrollments(int id);
+        Task<int> CountStudentsAsync();
+        Task<int> CountInstructorAsync();
     }
 }
