@@ -159,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="UMLDiagram.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

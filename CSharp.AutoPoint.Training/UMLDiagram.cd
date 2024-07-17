@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CSharp.AutoPoint.Training.Agents.CoursesOperations" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAIAAAACAAAACAAAAAAAAIAQAAAA=</HashCode>
+      <FileName>Agents\CoursesOperations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Agents.EnrollmentOperations" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAABAABAAACAAAAAAAAAAAABAABAAAAAAQAAAA=</HashCode>
+      <FileName>Agents\EnrollmentOperations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Agents.UsersOperations" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAgACGAAAAAAAAAQAAQAAAEAAAAAQAAAA=</HashCode>
+      <FileName>Agents\UsersOperations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.DependencyInjection.UnityConfig" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Configuration\UnityConfig.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Data.BaseRepository&lt;T&gt;" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAABAAAAAAAIAAAAAEAAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>Data\BaseRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Data.LMSDbContext" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAEAAAACAAAAAAABAAAAA=</HashCode>
+      <FileName>Data\LMSDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Repositories.CourseRepository" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAIAAIAABAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Data\Repositories\CourseRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Repositories.EnrollmentRepository" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAABAAAAAAAAAQAAAAAABAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Data\Repositories\EnrollmentRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Repositories.UserRepository" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAIAAAAAAAEAAAAAAAAAQAAAAAgAAAAAAEAAAA=</HashCode>
+      <FileName>Data\Repositories\UserRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Models.Course" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAEAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Course.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Models.Enrollment" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAQAAAAAAAAIAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Models\Enrollment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Models.User" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAEAAAAAQAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Program" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAABAAAAAAAAAACBAAAQAAQAAAIAAAAAADABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Services.CourseService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAIAAIAAAACAAAAACAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Services\CourseService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Services.EnrollmentService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAABAAAAAAAAEQAAAAAABAABAAAAAAAAAAA=</HashCode>
+      <FileName>Services\EnrollmentService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Services.UserService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAoAQAAAAAEAAAAAQAAAQAAAAQAAAAAACEAAAA=</HashCode>
+      <FileName>Services\UserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Utilities.ApplicationEvent" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utilities\ApplicationEvent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Utilities.Helper" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utilities\Helper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSharp.AutoPoint.Training.Utilities.Logger" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgAAAAAAAAAAAAAAAAAAAAAAIAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utilities\Logger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="CSharp.AutoPoint.Training.Data.ICourseRepository" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAIAAIAABAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Data\ICourseRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CSharp.AutoPoint.Training.Data.IEnrollmentRepository" Collapsed="true">
+    <Position X="11" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAABAAAAAAAAAQAAAAAABAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Data\IEnrollmentRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CSharp.AutoPoint.Training.Data.IUserRepository" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAIAAAAAAAEAAAAAAAAAQAAAAAgAAAAAAEAAAA=</HashCode>
+      <FileName>Data\IUserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CSharp.AutoPoint.Training.Interfaces.ICourseService" Collapsed="true">
+    <Position X="9.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAIAAIAAAACAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Services\ICourseService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CSharp.AutoPoint.Training.Interfaces.IEnrollmentService" Collapsed="true">
+    <Position X="12.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAABAAAAAAAAAQAAAAAABAABAAAAAAAAAAA=</HashCode>
+      <FileName>Services\IEnrollmentService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CSharp.AutoPoint.Training.Interfaces.IUserService" Collapsed="true">
+    <Position X="9.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAQAAAAAEAAAAAQAAAQAAAAQAAAAAACEAAAA=</HashCode>
+      <FileName>Services\IUserService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="CSharp.AutoPoint.Training.Models.UserRole" Collapsed="true">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
